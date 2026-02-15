@@ -21,5 +21,15 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        $this->call([
+            WindTreSecurityAnnexSeeder::class,
+            ComplianceContextSeeder::class,
+            DataClassificationSeeder::class,
+            PrerequisitesSeeder::class,
+            QuestionnaireSeeder::class,
+            RequirementCsaUpdateSeeder::class,
+            CsaStarSeeder::class,
+        ]);
     }
 }
